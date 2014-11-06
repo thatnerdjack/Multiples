@@ -39,13 +39,13 @@ public class Multiples {
         ArrayList<Integer> num1Array = findMultiplesTo(a, c);
         ArrayList<Integer> num2Array = findMultiplesTo(b, c);
 
-        for (int i = 0; i < num1Array.size(); i++) {
-            for (int i2 = 0; i2 < num2Array.size(); i++) {
+        for (int i = 0; i < num1Array.size() - 1; i++) {
+            for (int i2 = 0; i2 < num2Array.size() - 1; i2++) {
                 int numTest1 = num1Array.get(i);
                 int numTest2 = num2Array.get(i2);
                 if (numTest1 == numTest2) {
                     System.out.println("The least common multiple of " + a + " and " + b + " is " + numTest1);
-                    break;
+                    return;
                 }
             }
         }
